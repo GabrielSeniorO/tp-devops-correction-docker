@@ -41,5 +41,5 @@ build-and-push-docker-image:
       uses: docker/build-push-action@v6
       with:
         context: ./simple-api
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-simple-api:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-correction-docker:latest
         push: ${{ github.ref == 'refs/heads/main' }}
