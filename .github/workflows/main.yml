@@ -25,7 +25,7 @@ jobs:
       - name: SonarCloud Quality Gate
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: cd ./simple-api && mvn -B verify sonar:sonar -Dsonar.projectKey=GabrielSeniorO_tp-devops-correction-docker -Dsonar.organization=GabrielSeniorO -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: cd ./simple-api && mvn -B verify sonar:sonar -Dsonar.projectKey=GabrielSeniorO_tp-devops-correction-docker -Dsonar.organization=gabrielsenioro -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
   build-and-push-docker-image:
     needs: test-backend
